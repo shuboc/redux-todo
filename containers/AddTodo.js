@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from './actions'
+import { addTodo } from '../actions'
 
-const AddTodo = ({ dispatch }) => {
+let AddTodo = ({ dispatch }) => {
   let input
 
   return (
@@ -27,8 +27,6 @@ const AddTodo = ({ dispatch }) => {
   )
 }
 
-AddTodo.propTypes = {
-  dispatch: PropTypes.func.isRequired
-}
+AddTodo = connect()(AddTodo)
 
-export default connect()(AddTodo)
+export default AddTodo
