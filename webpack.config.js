@@ -11,7 +11,7 @@ module.exports = {
               loader: "babel",
               exclude: /node_modules/,
               query: {
-                presets: ['stage-2']
+                presets: ['es2015', 'stage-2']
               }
             }
         ]
