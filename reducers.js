@@ -16,6 +16,16 @@ function todos(state = [], action) {
           completed: false
         }
       ]
+    case TOGGLE_TODO:
+      return state.map((todo, index) => {
+        if (action.index === index) {
+          return {
+            ...todo,
+            completed: !todo.completed
+          };
+        }
+        return todo
+      })
     default:
       return state
   }
